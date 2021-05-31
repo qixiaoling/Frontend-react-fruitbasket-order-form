@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import "./Form.css"
+// import "./Form.css"
+import Alert from "./Alert";
 
 function FormControlled() {
     const [state, setState] = useState({
@@ -9,9 +10,13 @@ function FormControlled() {
         postcode: '',
         frequency: '',
         comment: '',
-        personReview: '',
+        personReview: 'google',
         checkTerms: false,
-        alert: '',
+        alert: {
+            show: false,
+            type: '',
+            msg: '',
+        },
 
     })
 
@@ -27,21 +32,24 @@ function FormControlled() {
 
     }
 
-    function submitForm(e) {
+    function handleSubmit(e) {
         e.preventDefault();
 
-        if(state.firstName || state.lastName || state.age || state.postcode === ''){
-
+        if(state.firstName = null){
+            showAlert(true, 'danger', 'Niet alle velden zijn ingevuld.')
         }
-        console.log("Yup, submitted!")
+        console.log("Submitted!")
+    }
+
+    function showAlert(show = false, type = '', msg = ''){
+        setState({alert : show, type, msg})
     }
 
     return (
         <>
             <div className="form-container">
-                <form className="form-container-inside" onSubmit={() => {
-                    submitForm()
-                }}>
+                <form className="form-container-inside" >
+                    {alert.show && <Alert {...state.alert} removeAlert={showAlert}/>}
                     <div className="basic-info">
                         <label htmlFor="firstName">
                             fist name ：
@@ -170,6 +178,7 @@ function FormControlled() {
                     <button
                         type="submit"
                         disabled={state.checkedTerms}
+                        onClick={handleSubmit}
                     >Verstuur
                     </button>
                 </form>
