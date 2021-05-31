@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Orders from "./Component/Orders";
-import Form from "./Component/Form";
+import FormControlled from "./Component/FormControlled";
 function App() {
   return (
     <>
@@ -11,7 +11,7 @@ function App() {
                 <Orders/>
             </section>
             <section>
-                <Form/>
+                <FormControlled />
             </section>
         </main>
 
