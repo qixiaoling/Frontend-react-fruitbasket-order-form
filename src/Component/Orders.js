@@ -5,33 +5,48 @@ import banana from "../assets/banana.jpg"
 import kiwi from "../assets/kiwi.jpg"
 import apple from "../assets/apple.jpg"
 import "./Orders.css"
+import Straw from "./Straw";
+import Banana from "./Banana";
+import Kiwi from "./Kiwi";
+import Apple from "./Apple";
 
 function Orders() {
+const[countStraw, setCountStraw] = useState(0);
+const[countKiwi, setCountKiwi] = useState(0);
+const [countBan, setCountBan] = useState(0);
+const [countAp, setCountAp] = useState(0)
 
+    function reset(){
+    setCountStraw(0);
+    setCountAp(0);
+    setCountBan(0);
+    setCountKiwi(0);
+    }
 
     return(
         <>
             <div className='orders-container'>
-                <SingleOrder
-                    imgUrl = {strawberry}
-                    text = 'Aarbeien'
-                    fruitID = '1'
+                <Straw countStraw = {countStraw}
+                       setCountStraw = {setCountStraw}
+                        imgUrl = {strawberry}
+                        text = "Aarbeien"
                 />
-                <SingleOrder
-                    imgUrl = {banana}
-                    text = 'Bananen'
-                    fruitID = '2'
+                <Kiwi countKiwi = {countKiwi}
+                       setCountKiwi = {setCountKiwi}
+                       imgUrl = {kiwi}
+                       text = "Kiwi"
                 />
-                <SingleOrder
-                    imgUrl = {apple}
-                    text = 'Applels'
-                    fruitID = '3'
+                <Banana countBan = {countBan}
+                       setCountBan = {setCountBan}
+                       imgUrl = {banana}
+                       text = "bananen"
                 />
-                <SingleOrder
-                    imgUrl = {kiwi}
-                    text = 'Kiwi'
-                    fruitID = '4'
+                <Apple countAp = {countAp}
+                       setCountAp = {setCountAp}
+                       imgUrl = {apple}
+                       text = "Apple"
                 />
+                <button className="reset-button" onClick={reset}>reset</button>
 
 
             </div>
