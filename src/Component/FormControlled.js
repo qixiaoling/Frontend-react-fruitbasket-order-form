@@ -106,7 +106,7 @@ function FormControlled() {
                             />Iedere week
                         </label>
 
-                        <label>
+                        <label className="frequency">
                             <input
                                 type="radio"
                                 id="frequency"
@@ -116,7 +116,7 @@ function FormControlled() {
                             />Om de week
                         </label>
 
-                        <label>
+                        <label className="frequency">
                             <input
                                 type="radio"
                                 id="frequency"
@@ -126,7 +126,7 @@ function FormControlled() {
                             />Iedere maand
                         </label>
 
-                        <label>
+                        <label className="frequency">
                             <input
                                 type="radio"
                                 id="frequency"
