@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Orders from "./Component/Orders";
 import FormControlled from "./Component/FormControlled";
+import FormHook from "./Component/FormHook";
 function App() {
   return (
     <>
@@ -11,7 +12,7 @@ function App() {
                 <Orders/>
             </section>
             <section>
-                <FormControlled />
+                <FormHook />
             </section>
         </main>
 

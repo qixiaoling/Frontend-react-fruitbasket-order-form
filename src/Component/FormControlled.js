@@ -106,7 +106,7 @@ function FormControlled() {
                             />Iedere week
                         </label>
 
-                        <label>
+                        <label htmlFor='frequency'>
                             <input
                                 type="radio"
                                 id="frequency"
@@ -116,7 +116,7 @@ function FormControlled() {
                             />Om de week
                         </label>
 
-                        <label>
+                        <label htmlFor='frequency'>
                             <input
                                 type="radio"
                                 id="frequency"
@@ -124,9 +124,9 @@ function FormControlled() {
                                 value="IedereMaand"
                                 onChange={handleChange}
                             />Iedere maand
-                        </label>
+                        </label >
 
-                        <label>
+                        <label htmlFor='frequency'>
                             <input
                                 type="radio"
                                 id="frequency"
