@@ -12,7 +12,10 @@ function FormHook() {
 
     function onFormSubmit(data) {
 
-        console.log(data)
+        console.log("this is: " + data)
+    }
+    function cancel(){
+        console.log('cancel');
     }
 
     return (
@@ -111,6 +114,10 @@ function FormHook() {
             <button type='submit'>
                 Verzend
             </button>
+            <button  type='button' onClick={cancel}>
+                Cancel
+            </button>
+
         </form>
     )
 }
